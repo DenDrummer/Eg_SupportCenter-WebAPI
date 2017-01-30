@@ -200,8 +200,8 @@
     <Content Include="Views\Globalization\NL\Home\Contact.cshtml" />
     <Content Include="Views\Globalization\NL\Home\Index.cshtml" />
     <Content Include="Views\Globalization\NL\Shared\_Layout.cshtml" />
-    <Content Include="Views\Globalization\NL\Shared\Error.cshtml" />
     <Content Include="Views\Globalization\EN\Shared\_Layout.cshtml" />
+    <Content Include="Views\Globalization\NL\Shared\Error.cshtml" />
     <Content Include="Views\Globalization\EN\Shared\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
