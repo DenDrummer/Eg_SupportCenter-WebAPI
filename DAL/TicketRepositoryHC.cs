@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using SC.BL.Domain;
 
 namespace SC.DAL
 {
-  public class TicketRepositoryHC : ITicketRepository
+    public class TicketRepositoryHC : ITicketRepository
   {
     private List<Ticket> tickets;
     private List<TicketResponse> responses;

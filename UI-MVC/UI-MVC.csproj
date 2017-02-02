@@ -193,16 +193,6 @@
     <Content Include="Views\Ticket\Delete.cshtml" />
     <Content Include="Views\Ticket\Create.cshtml" />
     <Content Include="Views\Ticket\_TicketResponsesPartial.cshtml" />
-    <Content Include="Views\Globalization\EN\Home\About.cshtml" />
-    <Content Include="Views\Globalization\EN\Home\Contact.cshtml" />
-    <Content Include="Views\Globalization\EN\Home\Index.cshtml" />
-    <Content Include="Views\Globalization\NL\Home\About.cshtml" />
-    <Content Include="Views\Globalization\NL\Home\Contact.cshtml" />
-    <Content Include="Views\Globalization\NL\Home\Index.cshtml" />
-    <Content Include="Views\Globalization\NL\Shared\_Layout.cshtml" />
-    <Content Include="Views\Globalization\EN\Shared\_Layout.cshtml" />
-    <Content Include="Views\Globalization\NL\Shared\Error.cshtml" />
-    <Content Include="Views\Globalization\EN\Shared\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

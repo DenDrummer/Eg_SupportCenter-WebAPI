@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using System.ComponentModel.DataAnnotations;
 namespace SC.BL.Domain
 {
-  public class TicketResponse : IValidatableObject
+    public class TicketResponse : IValidatableObject
   {
     public int Id { get; set; }
     [Required]

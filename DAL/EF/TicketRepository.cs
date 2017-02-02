@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SC.BL.Domain;
 
 namespace SC.DAL.EF
 {
-  public class TicketRepository : ITicketRepository
+    public class TicketRepository : ITicketRepository
   {
     private SupportCenterDbContext ctx;
 

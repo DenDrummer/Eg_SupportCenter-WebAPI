@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using SC.BL;
 using SC.BL.Domain;
@@ -10,7 +7,7 @@ using SC.UI.CA.ExtensionMethods;
 
 namespace SC.UI.CA
 {
-  class Program
+    class Program
   {
     private static bool quit = false;
     private static readonly ITicketManager mgr = new TicketManager();

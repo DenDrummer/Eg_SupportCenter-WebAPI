@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using SC.BL.Domain;
 namespace SC.DAL.EF
 {
-  internal class SupportCenterDbInitializer 
+    internal class SupportCenterDbInitializer 
     : DropCreateDatabaseIfModelChanges<SupportCenterDbContext>
   {
     protected override void Seed(SupportCenterDbContext context)

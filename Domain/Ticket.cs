@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SC.BL.Domain
 {
-  public class Ticket
+    public class Ticket
   {
     //[Key] /* TOEGEVOEGD, nadien VERWIJDERD 'Fluent API' */
     public int TicketNumber { get; set; }

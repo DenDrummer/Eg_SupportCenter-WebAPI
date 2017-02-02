@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http; // add reference to 'System.Net.Http'
 using System.Text;
-using System.Threading.Tasks;
 
 using Newtonsoft.Json; // install NuGet-package 'Newtonsoft.Json'
 
 using SC.BL.Domain;
 namespace SC.UI.CA
 {
-  internal class Service
+    internal class Service
   {
     private const string baseUri = "http://localhost:51150/api/";
     //private const string baseUri = "http://localhost.fiddler:51150/api/"; // use this when using fiddler to capture traffic! 

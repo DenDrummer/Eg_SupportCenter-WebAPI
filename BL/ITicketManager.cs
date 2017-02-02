@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 using SC.BL.Domain;
 
 namespace SC.BL
 {
-  public interface ITicketManager
+    public interface ITicketManager
   {
     IEnumerable<Ticket> GetTickets();
     Ticket GetTicket(int ticketNumber);
