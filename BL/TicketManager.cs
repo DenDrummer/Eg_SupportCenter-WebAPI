@@ -5,6 +5,7 @@ using System.Linq;
 
 using SC.DAL;
 using SC.BL.Domain;
+using SC.BL.Properties;
 
 namespace SC.BL
 {
@@ -114,7 +115,7 @@ namespace SC.BL
         return newTicketResponse;
       }
       else
-        throw new ArgumentException("Ticketnumber '" + ticketNumber + "' not found!");
+        throw new ArgumentException(Resources.Ticketnumber + ticketNumber + Resources.NotFound);
     }
 
     public void ChangeTicketStateToClosed(int ticketNumber)
@@ -130,7 +131,7 @@ namespace SC.BL
       bool valid = Validator.TryValidateObject(ticket, new ValidationContext(ticket), errors, validateAllProperties: true);
 
       if (!valid)
-        throw new ValidationException("Ticket not valid!");
+        throw new ValidationException(Resources.TicketInvalid);
     }
 
     private void Validate(TicketResponse response)
@@ -141,7 +142,7 @@ namespace SC.BL
       bool valid = Validator.TryValidateObject(response, new ValidationContext(response), errors, validateAllProperties: true);
 
       if (!valid)
-        throw new ValidationException("TicketResponse not valid!");
+        throw new ValidationException(Resources.TicketResponseInvalid);
     }
   }
 }

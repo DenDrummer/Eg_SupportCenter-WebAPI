@@ -1,19 +1,20 @@
 ﻿using System;
 
 using SC.BL.Domain;
+using SC.UI.CA.Properties;
 
 namespace SC.UI.CA.ExtensionMethods
 {
     internal static class ExtensionMethods
-  {
-    internal static string GetInfo(this Ticket t)
     {
-      return String.Format("[{0}] {1} ({2} antwoorden)", t.TicketNumber, t.Text, t.Responses == null ? 0 : t.Responses.Count);
-    }
+        internal static string GetInfo(this Ticket t)
+        {
+            return $"[{t.TicketNumber}] {t.Text} ({(t.Responses == null ? 0 : t.Responses.Count)} {Resources.Responses})";
+        }
 
-    internal static string GetInfo(this TicketResponse r)
-    {
-      return String.Format("{0:dd/MM/yyyy} {1}{2}", r.Date, r.Text, r.IsClientResponse ? " (client)" : "");
+        internal static string GetInfo(this TicketResponse r)
+        {
+            return $"{r.Date:dd/MM/yyyy} {r.Text}{(r.IsClientResponse ? $" ({Resources.Client})" : "")}";
+        }
     }
-  }
 }

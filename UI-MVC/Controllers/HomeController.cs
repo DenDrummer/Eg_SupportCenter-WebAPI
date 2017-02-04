@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using SC.UI.Web.MVC.App_GlobalResources;
+using System.Web.Mvc;
 
 namespace SC.UI.Web.MVC.Controllers
 {
@@ -11,14 +12,14 @@ namespace SC.UI.Web.MVC.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = Resources.AboutMessage;
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = Resources.ContactMessage;
 
             return View();
         }

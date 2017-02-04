@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SC.BL.Domain.Properties;
+using System;
 using System.Collections.Generic;
 
 using System.ComponentModel.DataAnnotations;
@@ -21,7 +22,7 @@ namespace SC.BL.Domain
 
       if (Date < Ticket.DateOpened)
       {
-        errors.Add(new ValidationResult("Can't be before the date the ticket is created!", new string[] { "Date" }));
+        errors.Add(new ValidationResult(Resources.ToSoon, new string[] { Resources.Date }));
       }
 
       return errors;

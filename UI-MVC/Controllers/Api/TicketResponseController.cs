@@ -6,6 +6,8 @@ using System.Web.Http;
 using SC.BL;
 using SC.BL.Domain;
 using SC.UI.Web.MVC.Models;
+using SC.UI.Web.MVC.App_GlobalResources;
+
 namespace SC.UI.Web.MVC.Controllers.Api
 {
     public class TicketResponseController : ApiController
@@ -27,7 +29,7 @@ namespace SC.UI.Web.MVC.Controllers.Api
             TicketResponse createdResponse = mgr.AddTicketResponse(response.TicketNumber, response.ResponseText, response.IsClientResponse);
 
             if (createdResponse == null)
-                return BadRequest("Er is iets misgelopen bij het registreren van het antwoord!");
+                return BadRequest(Resources.BadRequest);
 
             //// Circulaire referentie!! (TicketResponse <-> Ticket) -> can't be serialized!!
             //return CreatedAtRoute("DefaultApi",
