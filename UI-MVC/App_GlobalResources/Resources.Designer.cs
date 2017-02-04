@@ -259,6 +259,26 @@ namespace SC.UI.Web.MVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flag_nl {
+            get {
+                object obj = ResourceManager.GetObject("flag_nl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flag_uk {
+            get {
+                object obj = ResourceManager.GetObject("flag_uk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ticketnummer.
         /// </summary>
         internal static string FormIdLabel {

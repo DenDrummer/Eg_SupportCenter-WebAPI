@@ -25,6 +25,13 @@
                     <li>@Html.ActionLink(@Resources.Resources.ContactTitle, "Contact", "Home")</li>
                 </ul>
             </div>
+            <div class="dropdown" style="position:relative;display:inline-block">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <img src="~/Resources/netherlands_round_icon_64.png"alt="NL-NL" onclick="" />
+                    <img src="~/Resources/united_kingdom_round_icon_64.png" alt="EN-UK" onclick="" />
+                </div>
+            </div>
         </div>
     </div>
     <div class="container body-content">
@@ -40,3 +47,7 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+@section Scripts{
+    
+}
