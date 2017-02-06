@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - SupportCenter</title>
+    <title>@ViewBag.Title - @Resources.Resources.SupportCenter</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -16,14 +16,21 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("SupportCenter", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink(@Resources.Resources.SupportCenter, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink(@Resources.Resources.HomeTitle, "Index", "Home")</li>
+                    <li>@Html.ActionLink(@Resources.Resources.AboutTitle, "About", "Home")</li>
+                    <li>@Html.ActionLink(@Resources.Resources.ContactTitle, "Contact", "Home")</li>
                 </ul>
+            </div>
+            <div class="dropdown" style="position:relative;display:inline-block">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <img src="~/Resources/netherlands_round_icon_64.png"alt="NL-NL" onclick="" />
+                    <img src="~/Resources/united_kingdom_round_icon_64.png" alt="EN-UK" onclick="" />
+                </div>
             </div>
         </div>
     </div>
@@ -31,7 +38,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - SupportCenter</p>
+            <p>&copy; @DateTime.Now.Year - @Resources.Resources.SupportCenter</p>
         </footer>
     </div>
 
@@ -40,3 +47,7 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+@section Scripts{
+    
+}

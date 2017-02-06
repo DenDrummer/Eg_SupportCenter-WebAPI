@@ -1,13 +1,13 @@
 ﻿@model SC.BL.Domain.Ticket
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Resources.Resources.DetailsTitle;
 }
 
-<h2>Details</h2>
+<h2>@Resources.Resources.DetailsTitle</h2>
 
 <div>
-    <h4>Ticket</h4>
+    <h4>@Resources.Resources.Ticket</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -52,7 +52,7 @@
             {
                 <button type="button" class="btn btn-default btn-xs"
                         onclick="closeTicket(@Model.TicketNumber)">
-                    Close
+                    @Resources.Resources.Close
                 </button>
             }
         </dd>
@@ -60,22 +60,22 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TicketNumber }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink(Resources.Resources.Edit, "Edit", new { id = Model.TicketNumber }) |
+    @Html.ActionLink(Resources.Resources.BackToList, "Index")
 </p>
-<h4>Responses</h4>
+<h4>@Resources.Resources.Responses</h4>
 @*@Html.Partial("_TicketResponsesPartial", Model.Responses)*@
 @* /* OF: via ViewBag */ *@
 @*@Html.Partial("_TicketResponsesPartial", (IEnumerable<SC.BL.Domain.TicketResponse>)ViewBag.Responses)*@
 @* /* OF: via AJAX-call */ *@
-<p><button class="btn btn-default" onclick="loadResponsesOfTicket(@Model.TicketNumber)">Laad antwoorden</button></p>
+<p><button class="btn btn-default" onclick="loadResponsesOfTicket(@Model.TicketNumber)">@Resources.Resources.LoadAnswersBttn</button></p>
 <div id="addNewResponse" style="display: none">
     <table id="responses" class="table">
-        <tr><th>Response</th><th>Date</th><th>IsClientResponse</th></tr>
+        <tr><th>@Resources.Resources.Response</th><th>@Resources.Resources.Date</th><th>@Resources.Resources.IsClientResponse</th></tr>
     </table>
     <input id="responseText" name="responseText" type="text" class="form-control"
            style="width: 300px; float: left; margin-right: 5px" />
-    <button type="button" class="btn btn-default" onclick="postResponse()">Verzenden</button>
+    <button type="button" class="btn btn-default" onclick="postResponse()">@Resources.Resources.Send</button>
 </div>
 
 @section scripts {
@@ -87,7 +87,7 @@
                 dataType: 'json' // data-type expected back (response-data parsed to object)
             })
             .done(function (data) { showTicketResponses(data); })
-            .fail(function () { alert('Oeps, something went wrong!'); });
+            .fail(function () { alert(@Resources.Resources.Alert); });
         }
         function showTicketResponses(responses) {
             $.each(responses, function (index, value) { addResponseToList(value); });
@@ -113,7 +113,7 @@
                     dataType: 'json' // data-type expected back (response-data parsed to object)
                 })
                 .done(function (data) { addResponseToList(data); $('#responseText').val(''); })
-                .fail(function () { alert('Oeps, something went wrong!'); });
+                .fail(function () { alert(@Resources.Resources.Alert); });
             }
         }
 
@@ -125,7 +125,7 @@
             .done(function (data) {
                 $('#state').html('Closed');
             })
-            .fail(function () { alert('Oeps, something went wrong!'); });
+            .fail(function () { alert(@Resources.Resources.Alert); });
         }
     </script>
 }

@@ -117,130 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="D_tr_DateString" xml:space="preserve">
-    <value>Date</value>
+  <data name="NotFound" xml:space="preserve">
+    <value>' not found!</value>
   </data>
-  <data name="D_tr_ValidationResult" xml:space="preserve">
-    <value>Can't be before the date the ticket is created!</value>
+  <data name="TicketInvalid" xml:space="preserve">
+    <value>Ticket not valid!</value>
   </data>
-  <data name="D_t_ErrorMessage" xml:space="preserve">
-    <value>There is a maximum of 100 characters allowed</value>
+  <data name="Ticketnumber" xml:space="preserve">
+    <value>Ticketnumber '</value>
   </data>
-  <data name="MVC_hc_AboutMessage" xml:space="preserve">
-    <value>Your application description page.</value>
-  </data>
-  <data name="MVC_hc_ContactMessage" xml:space="preserve">
-    <value>Your contact page.</value>
-  </data>
-  <data name="MVC_h_AboutContent" xml:space="preserve">
-    <value>Use this area to provide additional information.</value>
-  </data>
-  <data name="MVC_h_AboutTitle" xml:space="preserve">
-    <value>About</value>
-  </data>
-  <data name="MVC_h_ActionLinkAllTickets" xml:space="preserve">
-    <value>All tickets</value>
-  </data>
-  <data name="MVC_h_ActionLinkCreate" xml:space="preserve">
-    <value>Create</value>
-  </data>
-  <data name="MVC_h_AllTickets" xml:space="preserve">
-    <value>All tickets</value>
-  </data>
-  <data name="MVC_h_AllTicketsInfo" xml:space="preserve">
-    <value>Shows a list with all existing tickets.</value>
-  </data>
-  <data name="MVC_h_ContactPhoneContent" xml:space="preserve">
-    <value>P:</value>
-  </data>
-  <data name="MVC_h_ContactPhoneTitle" xml:space="preserve">
-    <value>Phone</value>
-  </data>
-  <data name="MVC_h_ContactTitle" xml:space="preserve">
-    <value>Contact</value>
-  </data>
-  <data name="MVC_h_FormBttnValue" xml:space="preserve">
-    <value>Show ticket</value>
-  </data>
-  <data name="MVC_h_FormIdLabel" xml:space="preserve">
-    <value>TicketNumber</value>
-  </data>
-  <data name="MVC_h_IndexTitle" xml:space="preserve">
-    <value>Welkom</value>
-  </data>
-  <data name="MVC_h_Marketing" xml:space="preserve">
-    <value>Marketing:</value>
-  </data>
-  <data name="MVC_h_NewTicket" xml:space="preserve">
-    <value>New ticket</value>
-  </data>
-  <data name="MVC_h_NewTicketInfo" xml:space="preserve">
-    <value>Create a new ticket in the system.</value>
-  </data>
-  <data name="MVC_h_ShowTicket" xml:space="preserve">
-    <value>Show ticket</value>
-  </data>
-  <data name="MVC_h_ShowTicketInfo" xml:space="preserve">
-    <value>Show the details of a ticket.</value>
-  </data>
-  <data name="MVC_h_Support" xml:space="preserve">
-    <value>Support:</value>
-  </data>
-  <data name="MVC_h_SupportCenter" xml:space="preserve">
-    <value>SupportCenter</value>
-  </data>
-  <data name="MVC_h_WelcomeMssgIndex" xml:space="preserve">
-    <value>Welcome on the online helpdesk system.</value>
-  </data>
-  <data name="MVC_s_ErrorH1" xml:space="preserve">
-    <value>Error.</value>
-  </data>
-  <data name="MVC_s_ErrorH2" xml:space="preserve">
-    <value>An error ocurres while processing your request.</value>
-  </data>
-  <data name="MVC_s_ErrorTitle" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="MVC_trc_BadRequest" xml:space="preserve">
-    <value>There went something wrong with the registration of the answer!</value>
-  </data>
-  <data name="MVC_t_ActionLickBack" xml:space="preserve">
-    <value>Back to List</value>
-  </data>
-  <data name="MVC_t_ActionLinkEdit" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="MVC_t_Alert" xml:space="preserve">
-    <value>Oeps, something went wrong!</value>
-  </data>
-  <data name="MVC_t_CreateNew" xml:space="preserve">
-    <value>Create New</value>
-  </data>
-  <data name="MVC_t_DeleteBttn" xml:space="preserve">
-    <value>Delete</value>
-  </data>
-  <data name="MVC_t_DeleteH2" xml:space="preserve">
-    <value>Are you sure you want to delete this?</value>
-  </data>
-  <data name="MVC_t_DetailsTitle" xml:space="preserve">
-    <value>Details</value>
-  </data>
-  <data name="MVC_t_IndexTitle" xml:space="preserve">
-    <value>Index</value>
-  </data>
-  <data name="MVC_t_IsClientResponse" xml:space="preserve">
-    <value>IsClientResponse</value>
-  </data>
-  <data name="MVC_t_LoadAnswerBttn" xml:space="preserve">
-    <value>Load answers</value>
-  </data>
-  <data name="MVC_t_SaveBttn" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="MVC_t_Send" xml:space="preserve">
-    <value>Send</value>
-  </data>
-  <data name="MVC_t_TicketH4" xml:space="preserve">
-    <value>Ticket</value>
+  <data name="TicketResponseInvalid" xml:space="preserve">
+    <value>TicketResponse not valid!</value>
   </data>
 </root>

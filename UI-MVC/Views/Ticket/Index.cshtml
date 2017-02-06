@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<SC.BL.Domain.Ticket>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = @Resources.Resources.IndexTitle;
 }
 
-<h2>Index</h2>
+<h2>@Resources.Resources.IndexTitle</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink(@Resources.Resources.CreateNew, "Create")
 </p>
 <table class="table">
     <tr>
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.State)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TicketNumber }) |
-            @Html.ActionLink("Details", "Details", new { id = item.TicketNumber }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.TicketNumber })
+            @Html.ActionLink(@Resources.Resources.Edit, "Edit", new { id=item.TicketNumber }) |
+            @Html.ActionLink(@Resources.Resources.DetailsTitle, "Details", new { id = item.TicketNumber }) |
+            @Html.ActionLink(@Resources.Resources.Delete, "Delete", new { id = item.TicketNumber })
         </td>
     </tr>
 }

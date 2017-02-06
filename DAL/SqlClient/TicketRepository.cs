@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using SC.BL.Domain;
 
 namespace SC.DAL.SqlClient
 {
-  public class TicketRepository : ITicketRepository
+    public class TicketRepository : ITicketRepository
   {
     private SqlConnection GetConnection()
     {

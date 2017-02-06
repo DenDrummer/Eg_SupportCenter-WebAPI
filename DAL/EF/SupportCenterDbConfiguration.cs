@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 
 namespace SC.DAL.EF
 {
-  internal class SupportCenterDbConfiguration : DbConfiguration
+    internal class SupportCenterDbConfiguration : DbConfiguration
   {
     public SupportCenterDbConfiguration()
     {
