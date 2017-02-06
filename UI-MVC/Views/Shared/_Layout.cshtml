@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - @Resources.Resources.SupportCenter</title>
+    <link href="~/Views/Shared/_LayoutCSS.css" rel="stylesheet" type="text/css" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -25,11 +26,12 @@
                     <li>@Html.ActionLink(@Resources.Resources.ContactTitle, "Contact", "Home")</li>
                 </ul>
             </div>
-            <div class="dropdown" style="position:relative;display:inline-block">
+            @*Html.DropDownList("Derp",)*@
+            <div class="dropdown">
                 <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    <img src="~/Resources/netherlands_round_icon_64.png"alt="NL-NL" onclick="" />
-                    <img src="~/Resources/united_kingdom_round_icon_64.png" alt="EN-UK" onclick="" />
+                <div class="dropdown-content btn btn-toolbar">
+                    <a href=""><img src="~/Resources/netherlands_round_icon_64.png" alt="NL-NL" /></a>
+                    <a href=""><img src="~/Resources/united_kingdom_round_icon_64.png" alt="EN-UK" /></a>
                 </div>
             </div>
         </div>
@@ -49,5 +51,9 @@
 </html>
 
 @section Scripts{
-    
+    <script type="text/javascript">
+        function changeLanguage(newLang) {
+
+        }
+    </script>
 }

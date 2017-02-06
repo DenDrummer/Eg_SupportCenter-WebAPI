@@ -21,7 +21,7 @@ namespace SC.DAL.SqlClient
 
       string selectStatement = "SELECT TicketNumber, AccountId, [Text], DateOpened, State, DeviceName FROM Ticket";
 
-      using (var connection = this.GetConnection())
+      using (var connection = GetConnection())
       {
         SqlCommand command = new SqlCommand(selectStatement, connection);
 
