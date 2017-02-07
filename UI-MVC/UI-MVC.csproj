@@ -144,6 +144,7 @@
     <Compile Include="Controllers\Api\TicketController.cs" />
     <Compile Include="Controllers\Api\TicketResponseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -209,6 +210,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Language\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
