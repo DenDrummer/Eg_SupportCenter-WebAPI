@@ -37,3 +37,21 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+UL.nav > LI {
+    list-style: none;
+    float: left;
+    border: 1px solid red;
+    position: relative;
+    height: 24px; /* height included for IE 7 */
+}
+
+UL.nav UL{
+    right: 1px;
+    position: relative;            
+}
+
+UL.nav > LI:hover UL{
+    left: 0;
+    top: 24px; /* IE7 has problems without this */
+}
