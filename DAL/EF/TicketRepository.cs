@@ -24,7 +24,7 @@ namespace SC.DAL.EF
 
       // Lazy-loading
       //IEnumerable<Ticket> tickets = ctx.Tickets.AsEnumerable<Ticket>(); // needs 'Multiple Active Result Sets' (MARS) for lazy-loading (connectionstring)
-      IEnumerable<Ticket> tickets = ctx.Tickets.ToList<Ticket>(); // all (parent-)entities are loaded before lazy-loading associated data (doesn't need MARS)
+      IEnumerable<Ticket> tickets = ctx.Tickets.ToList(); // all (parent-)entities are loaded before lazy-loading associated data (doesn't need MARS)
 
       return tickets;
     }

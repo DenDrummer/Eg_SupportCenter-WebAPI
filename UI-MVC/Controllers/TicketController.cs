@@ -4,8 +4,11 @@ using System.Web.Mvc;
 
 using SC.BL;
 using SC.BL.Domain;
+using SC.UI.Web.MVC.Helpers;
+
 namespace SC.UI.Web.MVC.Controllers
 {
+    [Internationalization]
     public class TicketController : Controller
     {
         private ITicketManager mgr = new TicketManager();

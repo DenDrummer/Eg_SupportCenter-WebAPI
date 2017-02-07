@@ -26,14 +26,29 @@
                     <li>@Html.ActionLink(@Resources.Resources.ContactTitle, "Contact", "Home")</li>
                 </ul>
             </div>
-            @*Html.DropDownList("Derp",)*@
-            <div class="dropdown">
+            @{
+                Html.DropDownList("Languages", new List<SelectListItem>()
+                {
+                    new SelectListItem() {Text="Derpish",Value="derp",Selected=true},
+                    new SelectListItem() {Text="English", Value="en-UK", Selected=false},
+                    new SelectListItem() {Text="Dutch", Value="nl-BE", Selected=false}
+                });
+            }
+            <div class="dropdown navbar-collapse collapse">
                 <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content btn btn-toolbar">
+                <div class="dropdown-content btn btn-toolbar nav navbar-nav">
                     <a href=""><img src="~/Resources/netherlands_round_icon_64.png" alt="NL-NL" /></a>
                     <a href=""><img src="~/Resources/united_kingdom_round_icon_64.png" alt="EN-UK" /></a>
                 </div>
             </div>
+            <ul class="nav navbar-collapse collapse">
+                <li class="dropbtn btn">Derp
+                <ul>
+                    <li class="nav navbar-nav btn">@Html.ActionLink("EN", "ChangeLang", "Language", new { newLang = "en-GB" }, null)</li>
+                    <li class="nav navbar-nav btn">@Html.ActionLink("NL", "ChangeLang", "Language", new { newLang = "nl-NL" }, null)</li>
+                </ul>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="container body-content">
@@ -52,8 +67,16 @@
 
 @section Scripts{
     <script type="text/javascript">
-        function changeLanguage(newLang) {
-
-        }
+        window.onload(function() {
+            @*Html.Action(actionName: "LoadLang", controllerName: "Language")*@
+            $.ajax({
+                url: '@Url.Action("LoadLang","Language")'
+                
+            }).done(function () {
+                alert('done 360 noscope style');
+            }).error(function () {
+                alert('420 rekt blaze it style')
+            })
+        })
     </script>
 }

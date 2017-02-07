@@ -1,8 +1,10 @@
 ﻿using SC.UI.Web.MVC.App_GlobalResources;
+using SC.UI.Web.MVC.Helpers;
 using System.Web.Mvc;
 
 namespace SC.UI.Web.MVC.Controllers
 {
+    [Internationalization]
     public class HomeController : Controller
     {
         public ActionResult Index()
