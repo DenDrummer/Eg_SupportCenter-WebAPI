@@ -432,6 +432,15 @@ namespace SC.UI.Web.MVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Taal.
+        /// </summary>
+        internal static string Taal {
+            get {
+                return ResourceManager.GetString("Taal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ticket.
         /// </summary>
         internal static string Ticket {

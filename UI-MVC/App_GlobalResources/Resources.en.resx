@@ -231,6 +231,9 @@
   <data name="SupportCenter" xml:space="preserve">
     <value>SupportCenter</value>
   </data>
+  <data name="Taal" xml:space="preserve">
+    <value>Language</value>
+  </data>
   <data name="Ticket" xml:space="preserve">
     <value>Ticket</value>
   </data>

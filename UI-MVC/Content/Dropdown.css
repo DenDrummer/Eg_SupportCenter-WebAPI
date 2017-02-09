@@ -1,0 +1,16 @@
+﻿ul.nav > li {
+    list-style: none;
+    float: left;
+    position: relative;
+    height: 24px;
+}
+
+ul.nav ul{
+    left: -10000px;
+    position: absolute;
+}
+
+ul.nav > li:hover ul{
+    left: 0;
+    top: 24px;
+}
