@@ -42,11 +42,12 @@
                 </div>
             </div>
             <ul class="nav navbar-collapse collapse">
-                <li class="dropbtn btn">Derp
-                <ul>
-                    <li class="nav navbar-nav btn">@Html.ActionLink("EN", "ChangeLang", "Language", new { newLang = "en-GB" }, null)</li>
-                    <li class="nav navbar-nav btn">@Html.ActionLink("NL", "ChangeLang", "Language", new { newLang = "nl-NL" }, null)</li>
-                </ul>
+                <li class="dropbtn btn">
+                    Derp
+                    <ul>
+                        <li class="nav navbar-nav btn">@Html.ActionLink("EN", "ChangeLang", "Language", new { newLang = "en-GB" }, null)</li>
+                        <li class="nav navbar-nav btn">@Html.ActionLink("NL", "ChangeLang", "Language", new { newLang = "nl-NL" }, null)</li>
+                    </ul>
                 </li>
             </ul>
         </div>
@@ -67,16 +68,19 @@
 
 @section Scripts{
     <script type="text/javascript">
-        window.onload(function() {
-            @*Html.Action(actionName: "LoadLang", controllerName: "Language")*@
-            $.ajax({
-                url: '@Url.Action("LoadLang","Language")'
-                
-            }).done(function () {
-                alert('done 360 noscope style');
-            }).error(function () {
-                alert('420 rekt blaze it style')
-            })
+        window.onload(function () {
+            var isPostBack = isPostBack ? "true" : "false"
+            if (!isPostBack) {
+                @*Html.Action(actionName: "LoadLang", controllerName: "Language")*@
+                $.ajax({
+                    url: '@Url.Action("LoadLang","Language")'
+                }).done(function () {
+                    alert('done 360 noscope style');
+                }).error(function () {
+                    alert('420 rekt blaze it style')
+                })
+
+            }
         })
     </script>
 }
