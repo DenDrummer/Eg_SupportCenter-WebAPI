@@ -175,6 +175,9 @@
     <Content Include="Content\Site.css" />
     <None Include="Resources\netherlands_round_icon_64.png" />
     <None Include="Resources\united_kingdom_round_icon_64.png" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\netherlands_round_icon_32.png" />
+    <None Include="Resources\united_kingdom_round_icon_32.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

@@ -38,3 +38,22 @@
         }*@
     </div>
 </div>
+
+@section Scripts{
+    <script type="text/javascript">
+        window.onload(function () {
+            var isPostBack = isPostBack ? "true" : "false"
+            if (!isPostBack) {
+                @Html.Action(actionName: "LoadLang", controllerName: "Language")
+                @*$.ajax({
+                    url: '@Url.Action("LoadLang","Language")'
+                }).done(function () {
+                    alert('done 360 noscope style');
+                }).error(function () {
+                    alert('420 rekt blaze it style')
+                })*@
+
+            }
+        })
+    </script>
+}
