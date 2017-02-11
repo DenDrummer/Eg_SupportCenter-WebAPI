@@ -137,10 +137,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Content\App_Start\BundleConfig.cs" />
+    <Compile Include="Content\App_Start\FilterConfig.cs" />
+    <Compile Include="Content\App_Start\RouteConfig.cs" />
+    <Compile Include="Content\App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Api\TicketController.cs" />
     <Compile Include="Controllers\Api\TicketResponseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -165,8 +165,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ActionLinkImg.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Dropdown.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -211,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Language\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

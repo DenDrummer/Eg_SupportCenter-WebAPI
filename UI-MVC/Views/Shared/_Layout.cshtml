@@ -6,6 +6,8 @@
     <title>@ViewBag.Title - @Resources.Resources.SupportCenter</title>
     <link href="~/Views/Shared/_LayoutCSS.css" rel="stylesheet" type="text/css" />
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/dropdown.css")
+    @Styles.Render("~/Content/ActionLinkImg.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -24,16 +26,22 @@
                     <li>@Html.ActionLink(@Resources.Resources.HomeTitle, "Index", "Home")</li>
                     <li>@Html.ActionLink(@Resources.Resources.AboutTitle, "About", "Home")</li>
                     <li>@Html.ActionLink(@Resources.Resources.ContactTitle, "Contact", "Home")</li>
+                    <li>@Html.ActionLink(@Resources.Resources.Taal, "")
+                        <ul>
+                            <li>@Html.ActionLink(" ", "ChangeLang", "Language", new { newLang = "nl-NL" }, new { @class = "mylinkNL" })</li>
+                            <li>@Html.ActionLink(" ", "ChangeLang", "Language", new { newLang = "en-GB" }, new { @class = "mylinkEN" })</li>
+                        </ul>
+                   </li>
                 </ul>
             </div>
-            @{
-                Html.DropDownList("Languages", new List<SelectListItem>()
-                {
-                    new SelectListItem() {Text="Derpish",Value="derp",Selected=true},
-                    new SelectListItem() {Text="English", Value="en-UK", Selected=false},
-                    new SelectListItem() {Text="Dutch", Value="nl-BE", Selected=false}
-                });
-            }
+            @*@{
+        Html.DropDownList("Languages", new List<SelectListItem>()
+        {
+            new SelectListItem() {Text="Derpish",Value="derp",Selected=true},
+            new SelectListItem() {Text="English", Value="en-UK", Selected=false},
+            new SelectListItem() {Text="Dutch", Value="nl-BE", Selected=false}
+        });
+    }
             <div class="dropdown navbar-collapse collapse">
                 <button class="dropbtn">Dropdown</button>
                 <div class="dropdown-content btn btn-toolbar nav navbar-nav">
@@ -49,7 +57,7 @@
                         <li class="nav navbar-nav btn">@Html.ActionLink("NL", "ChangeLang", "Language", new { newLang = "nl-NL" }, null)</li>
                     </ul>
                 </li>
-            </ul>
+            </ul>*@
         </div>
     </div>
     <div class="container body-content">

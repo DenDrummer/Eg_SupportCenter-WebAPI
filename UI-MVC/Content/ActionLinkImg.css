@@ -1,0 +1,13 @@
+﻿.mylinkNL{
+    background: url('../Resources/netherlands_round_icon_64.png') no-repeat center right;
+    display: block;
+    height: 84px;
+    width: 264px;
+}
+
+.mylinkEN{
+    background: url('../Resources/united_kingdom_round_icon_64.png') no-repeat center right;
+    display: block;
+    height: 84px;
+    width: 264px;
+}
