@@ -1,4 +1,4 @@
-﻿using SC.UI.Web.MVC.Helpers;
+﻿
 using System;
 using System.Globalization;
 using System.Text;
@@ -8,8 +8,7 @@ using System.Web.Mvc;
 
 namespace SC.UI.Web.MVC.Controllers
 {
-    [Internationalization]
-    public class LanguageController : Controller
+    public class LanguageController : BaseController
     {
         public ActionResult ChangeLang(string newLang)
         {
@@ -17,10 +16,11 @@ namespace SC.UI.Web.MVC.Controllers
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
             /*Response.Cookies["lang"].Value = newLang;
             Response.Cookies["lang"].Expires = DateTime.Now.AddDays(14);*/
-            HttpCookie cookie = new HttpCookie("cookie");
+            HttpCookie cookie = new HttpCookie("lang");
             cookie.Value = newLang;
             cookie.Expires = DateTime.Now.AddDays(14);
-            Response.Cookies.Add(cookie);
+            //Response.Cookies.Add(cookie);
+            HttpContext.Response.SetCookie(cookie);
             
             //Settings s = new Settings();
             //s.Language = newLang;

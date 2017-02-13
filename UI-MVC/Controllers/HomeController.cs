@@ -1,19 +1,21 @@
 ﻿using SC.UI.Web.MVC.App_GlobalResources;
-using SC.UI.Web.MVC.Helpers;
 using System.Web.Mvc;
 
 namespace SC.UI.Web.MVC.Controllers
 {
-    [Internationalization]
-    public class HomeController : Controller
+
+    public class HomeController : BaseController
     {
+      
         public ActionResult Index()
         {
+            CookieMonster();
             return View();
         }
 
         public ActionResult About()
         {
+            CookieMonster();
             ViewBag.Message = Resources.AboutMessage;
 
             return View();
@@ -21,6 +23,7 @@ namespace SC.UI.Web.MVC.Controllers
 
         public ActionResult Contact()
         {
+            CookieMonster();
             ViewBag.Message = Resources.ContactMessage;
 
             return View();
