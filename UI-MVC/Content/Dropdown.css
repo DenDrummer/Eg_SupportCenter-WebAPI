@@ -12,5 +12,6 @@ ul.nav ul{
 
 ul.nav > li:hover ul{
     left: 0;
-    top: 24px;
+    top: 50px;
+    background: rgba(0,0,0,.75);
 }

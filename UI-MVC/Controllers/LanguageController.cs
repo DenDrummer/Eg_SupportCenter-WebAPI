@@ -3,6 +3,7 @@ using System;
 using System.Globalization;
 using System.Text;
 using System.Threading;
+using System.Web;
 using System.Web.Mvc;
 
 namespace SC.UI.Web.MVC.Controllers
@@ -14,9 +15,13 @@ namespace SC.UI.Web.MVC.Controllers
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo(newLang);
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
-            Response.Cookies["lang"].Value = newLang;
-            Response.Cookies["lang"].Expires = DateTime.Now.AddDays(14);
-
+            /*Response.Cookies["lang"].Value = newLang;
+            Response.Cookies["lang"].Expires = DateTime.Now.AddDays(14);*/
+            HttpCookie cookie = new HttpCookie("cookie");
+            cookie.Value = newLang;
+            cookie.Expires = DateTime.Now.AddDays(14);
+            Response.Cookies.Add(cookie);
+            
             //Settings s = new Settings();
             //s.Language = newLang;
             //s.Save();
@@ -35,7 +40,7 @@ namespace SC.UI.Web.MVC.Controllers
             return Redirect(newUri.ToString());
         }
 
-        public ActionResult LoadLang()
+        /*public ActionResult LoadLang()
         {
             string lang = Request.Cookies["lang"].Value;
             if (lang != null)
@@ -60,6 +65,15 @@ namespace SC.UI.Web.MVC.Controllers
                 return Redirect(newUri.ToString());
             }
             return Redirect(uri);
+        }*/
+
+        private void readCookie()
+        {
+            if(Request.Cookies["cookie"].Value != null) { 
+            var cookieValue = Request.Cookies["cookie"].Value;
+            Thread.CurrentThread.CurrentCulture = new CultureInfo(cookieValue);
+            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
+        }
         }
     }
 }
