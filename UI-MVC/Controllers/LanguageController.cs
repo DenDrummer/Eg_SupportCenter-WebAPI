@@ -48,7 +48,9 @@ namespace SC.UI.Web.MVC.Controllers
                 Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
                 Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
             }
-            string uri = Request.UrlReferrer.PathAndQuery;
+            var r = Request;
+            var urlR = r.UrlReferrer;
+            string uri = urlR.PathAndQuery;//.OriginalString;
             string[] uriParams = uri.Split('/');
             StringBuilder newUri = new StringBuilder();
             if (!lang.Equals(uriParams[1]))
