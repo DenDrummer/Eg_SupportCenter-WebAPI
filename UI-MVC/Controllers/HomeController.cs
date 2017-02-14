@@ -4,11 +4,18 @@ using System.Web.Mvc;
 
 namespace SC.UI.Web.MVC.Controllers
 {
-    [Internationalization]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
+            /*
+             * 1) is cookie?
+             * 2) JA :
+             * 2.1) read cookie language setting and applay
+             * 2) NEE:
+             * 2.2) choose language:
+             * 2.2.1) browser, hardcoded, web.config.....
+             * */
             return View();
         }
 

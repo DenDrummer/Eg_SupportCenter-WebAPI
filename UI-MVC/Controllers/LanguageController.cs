@@ -7,8 +7,7 @@ using System.Web.Mvc;
 
 namespace SC.UI.Web.MVC.Controllers
 {
-    [Internationalization]
-    public class LanguageController : Controller
+    public class LanguageController : BaseController
     {
         public ActionResult ChangeLang(string newLang)
         {
@@ -37,31 +36,45 @@ namespace SC.UI.Web.MVC.Controllers
 
         public ActionResult LoadLang()
         {
-            string lang = Request.Cookies["lang"].Value;
-            if (lang != null)
-            {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
-                Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
-            }
             var r = Request;
-            var urlR = r.UrlReferrer;
-            string uri = urlR.PathAndQuery;//.OriginalString;
-            string[] uriParams = uri.Split('/');
-            StringBuilder newUri = new StringBuilder();
-            if (!lang.Equals(uriParams[1]))
+            if (r != null)
             {
-                uriParams[1] = lang;
-                for (int i = 0; i < uriParams.Length; i++)
+                string lang = r.Cookies["lang"].Value;
+                if (lang != null)
                 {
-                    newUri.Append(uriParams[i]);
-                    if (i != uriParams.Length - 1)
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo(lang);
+                    Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
+                }
+                var urlR = r.UrlReferrer;
+                if (urlR != null)
+                {
+                    string uri = urlR.PathAndQuery;
+                    //string uri = urlR.OriginalString;
+                    string[] uriParams = uri.Split('/');
+                    StringBuilder newUri = new StringBuilder();
+                    if (!lang.Equals(uriParams[1]))
                     {
-                        newUri.Append('/');
+                        uriParams[1] = lang;
+                        for (int i = 0; i < uriParams.Length; i++)
+                        {
+                            newUri.Append(uriParams[i]);
+                            if (i != uriParams.Length - 1)
+                            {
+                                newUri.Append('/');
+                            }
+                        }
+                        return Redirect(newUri.ToString());
+
                     }
                 }
-                return Redirect(newUri.ToString());
+                var rawUrl = r.RawUrl;
+                if (rawUrl != null)
+                {
+                    string newUri = $"{rawUrl}{lang}";
+                    return Redirect(newUri);
+                }
             }
-            return Redirect(uri);
+            return View();
         }
     }
 }

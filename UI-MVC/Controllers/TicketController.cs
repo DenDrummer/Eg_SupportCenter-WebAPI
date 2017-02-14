@@ -8,8 +8,7 @@ using SC.UI.Web.MVC.Helpers;
 
 namespace SC.UI.Web.MVC.Controllers
 {
-    [Internationalization]
-    public class TicketController : Controller
+    public class TicketController : BaseController
     {
         private ITicketManager mgr = new TicketManager();
 

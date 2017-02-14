@@ -1,17 +1,36 @@
 ﻿ul.nav > li {
-    list-style: none;
+    list-style-type: none;
     float: left;
     position: relative;
-    height: 24px;
+    height: auto;
+    width: auto;
 }
 
-ul.nav ul{
-    left: -10000px;
+ul.nav ul {
+    list-style-type: none;
+    padding: 0;
+    left: -1px;
     position: absolute;
+    width: auto;
 }
 
-ul.nav > li:hover ul{
+ul.nav > li:hover ul {
     left: 0;
     top: 50px;
-    background: rgba(100, 100, 100, .75);
+    background: rgba(200, 200, 200, .75);
+    width: auto;
+}
+
+#dropMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 4px;
+}
+
+#myLinkNL {
+    background-image: url('../Resources/netherlands_round_icon_32.png');
+}
+
+#myLinkEN {
+    background-image: url('../Resources/united_kingdom_round_icon_32.png');
 }

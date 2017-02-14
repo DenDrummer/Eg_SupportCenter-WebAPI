@@ -22,15 +22,17 @@
                 @Html.ActionLink(@Resources.Resources.SupportCenter, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav menuBar">
                     <li>@Html.ActionLink(@Resources.Resources.HomeTitle, "Index", "Home")</li>
                     <li>@Html.ActionLink(@Resources.Resources.AboutTitle, "About", "Home")</li>
                     <li>@Html.ActionLink(@Resources.Resources.ContactTitle, "Contact", "Home")</li>
-                    <li>
+                    <li class="langMenu">
                         @Html.ActionLink(@Resources.Resources.Taal, "")
-                    <ul class="">
-                        <li>@Html.ActionLink("derp 1", "ChangeLang", "Language", new { newLang = "nl-NL" }, new { @class = "mylinkNL" })</li>
-                        <li>@Html.ActionLink("derp 2", "ChangeLang", "Language", new { newLang = "en-GB" }, new { @class = "mylinkEN" })</li>
+                    <ul class="dropMenu">
+                        <li><a href="@Url.Action("ChangeLang","Language", new { newLang = "nl-NL" })">
+                            <img src="~/Resources/netherlands_round_icon_32.png" alt="NL" /> </a></li>
+                        <li><a href="@Url.Action("ChangeLang","Language", new { newLang = "en-GB" })">
+                            <img src="~/Resources/united_kingdom_round_icon_32.png" alt="EN" /></a></li>
                     </ul>
                 </li>
             </ul>

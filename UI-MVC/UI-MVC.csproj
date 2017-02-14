@@ -143,6 +143,7 @@
     <Compile Include="Content\App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\Api\TicketController.cs" />
     <Compile Include="Controllers\Api\TicketResponseController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
@@ -213,6 +214,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
     <Folder Include="Views\Language\" />
   </ItemGroup>
   <ItemGroup>

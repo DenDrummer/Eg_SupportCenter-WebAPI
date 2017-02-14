@@ -17,8 +17,8 @@ namespace SC.UI.Web.MVC
                     controller = "Home",
                     action = "Index",
                     id = "",
-                    language = "nl",
-                    culture = "NL"
+                    language = "en",
+                    culture = "GB"
                 });
 
             routes.MapRoute(
