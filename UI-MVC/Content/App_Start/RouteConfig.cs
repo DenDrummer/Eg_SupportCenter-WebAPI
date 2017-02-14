@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Globalization;
+using System.Threading;
+using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace SC.UI.Web.MVC
@@ -7,6 +9,7 @@ namespace SC.UI.Web.MVC
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            string lang = CultureInfo.CurrentCulture.ToString();
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
@@ -17,8 +20,8 @@ namespace SC.UI.Web.MVC
                     controller = "Home",
                     action = "Index",
                     id = "",
-                    language = "nl",
-                    culture = "NL"
+                    language = lang.Split('-')[0],
+                    culture = lang.Split('-')[1]
                 });
 
             routes.MapRoute(
