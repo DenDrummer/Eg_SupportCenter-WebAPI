@@ -55,3 +55,12 @@ UL.nav > LI:hover UL{
     left: 0;
     top: 24px; /* IE7 has problems without this */
 }
+
+#langMenu{
+    align-items:flex-end;
+    align-self:flex-end;
+}
+
+#menuBar{
+    width:100%;
+}

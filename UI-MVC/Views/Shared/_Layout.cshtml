@@ -6,7 +6,7 @@
     <title>@ViewBag.Title - @Resources.Resources.SupportCenter</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/Dropdown.css")
-    @Styles.Render("~/Content/ActionLinkImg.css")
+   
     @*@Styles.Render("~/Content/_LayoutCSS.css")*@
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -22,55 +22,39 @@
                 @Html.ActionLink(@Resources.Resources.SupportCenter, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav menuBar">
                     <li>@Html.ActionLink(@Resources.Resources.HomeTitle, "Index", "Home")</li>
                     <li>@Html.ActionLink(@Resources.Resources.AboutTitle, "About", "Home")</li>
                     <li>@Html.ActionLink(@Resources.Resources.ContactTitle, "Contact", "Home")</li>
-                    <li>
+                    <li class="langMenu">
                         @Html.ActionLink(@Resources.Resources.Taal, "")
-                    <ul class="">
-                        <li>@Html.ActionLink(" ", "ChangeLang", "Language", new { newLang = "nl-NL" }, new { @class = "mylinkNL" })</li>
-                        <li>@Html.ActionLink(" ", "ChangeLang", "Language", new { newLang = "en-GB" }, new { @class = "mylinkEN" })</li>
-                    </ul>
-                </li>
-            </ul>
+                        <ul class="dropMenu">
+                            <li>
+                                <a href="@Url.Action("ChangeLang","Language", new { newLang = "nl-NL" })">
+                                    <img src="~/Resources/netherlands_round_icon_32.png" alt="NL" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("ChangeLang","Language", new { newLang = "en-GB" })">
+                                    <img src="~/Resources/united_kingdom_round_icon_32.png" alt="EN" />
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-        @*@{
-                Html.DropDownList("Languages", new List<SelectListItem>()
-                {
-                    new SelectListItem() {Text="Derpish",Value="derp",Selected=true},
-                    new SelectListItem() {Text="English", Value="en-UK", Selected=false},
-                    new SelectListItem() {Text="Dutch", Value="nl-BE", Selected=false}
-                });
-            }
-                    <div class="dropdown navbar-collapse collapse">
-                        <button class="dropbtn">Dropdown</button>
-                        <div class="dropdown-content btn btn-toolbar nav navbar-nav">
-                            <a href=""><img src="~/Resources/netherlands_round_icon_64.png" alt="NL-NL" /></a>
-                            <a href=""><img src="~/Resources/united_kingdom_round_icon_64.png" alt="EN-UK" /></a>
-                        </div>
-                    </div>
-                    <ul class="nav navbar-collapse collapse">
-                        <li class="dropbtn btn">
-                            Derp
-                            <ul>
-                                <li class="nav navbar-nav btn">@Html.ActionLink("EN", "ChangeLang", "Language", new { newLang = "en-GB" }, null)</li>
-                                <li class="nav navbar-nav btn">@Html.ActionLink("NL", "ChangeLang", "Language", new { newLang = "nl-NL" }, null)</li>
-                            </ul>
-                        </li>
-                    </ul>*@
     </div>
-</div>
-<div class="container body-content">
-    @RenderBody()
-    <hr />
-    <footer>
-        <p>&copy; @DateTime.Now.Year - @Resources.Resources.SupportCenter</p>
-    </footer>
-</div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - @Resources.Resources.SupportCenter</p>
+        </footer>
+    </div>
 
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/bootstrap")
-@RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
