@@ -4,7 +4,6 @@ using System.Web.Mvc;
 
 using SC.BL;
 using SC.BL.Domain;
-using SC.UI.Web.MVC.Helpers;
 
 namespace SC.UI.Web.MVC.Controllers
 {
@@ -15,6 +14,7 @@ namespace SC.UI.Web.MVC.Controllers
         // GET: Ticket
         public ActionResult Index()
         {
+            CookieMonster();
             IEnumerable<Ticket> tickets = mgr.GetTickets();
             return View(tickets);
         }
@@ -22,6 +22,7 @@ namespace SC.UI.Web.MVC.Controllers
         // GET: Ticket/Details/5
         public ActionResult Details(int id)
         {
+            CookieMonster();
             Ticket ticket = mgr.GetTicket(id);
 
             var responses = mgr.GetTicketResponses(id).ToList();
@@ -36,6 +37,7 @@ namespace SC.UI.Web.MVC.Controllers
         // GET: Ticket/Create
         public ActionResult Create()
         {
+            CookieMonster();
             return View();
         }
 
@@ -43,6 +45,7 @@ namespace SC.UI.Web.MVC.Controllers
         [HttpPost]
         public ActionResult Create(Ticket ticket)
         {
+            CookieMonster();
             if (ModelState.IsValid)
             {
                 ticket = mgr.AddTicket(ticket.AccountId, ticket.Text);
@@ -56,6 +59,7 @@ namespace SC.UI.Web.MVC.Controllers
         // GET: Ticket/Edit/5
         public ActionResult Edit(int id)
         {
+            CookieMonster();
             Ticket ticket = mgr.GetTicket(id);
             return View(ticket);
         }
@@ -64,6 +68,7 @@ namespace SC.UI.Web.MVC.Controllers
         [HttpPost]
         public ActionResult Edit(int id, Ticket ticket)
         {
+            CookieMonster();
             if (ModelState.IsValid)
             {
                 mgr.ChangeTicket(ticket);
@@ -77,6 +82,7 @@ namespace SC.UI.Web.MVC.Controllers
         // GET: Ticket/Delete/5
         public ActionResult Delete(int id)
         {
+            CookieMonster();
             Ticket ticket = mgr.GetTicket(id);
             return View(ticket);
         }
@@ -85,6 +91,7 @@ namespace SC.UI.Web.MVC.Controllers
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
+            CookieMonster();
             try
             {
                 mgr.RemoveTicket(id);
