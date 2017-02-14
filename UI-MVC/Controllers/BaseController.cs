@@ -36,11 +36,6 @@ namespace SC.UI.Web.MVC.Controllers
            
             return Redirect("Index");
         }
-        /*
-        // GET: Base
-        public ActionResult Index()
-        {
-            return View();
-        }*/
+        
     }
 }
