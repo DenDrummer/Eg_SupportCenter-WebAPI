@@ -20,13 +20,11 @@ namespace SC.UI.CA
 
         static void Main(string[] args)
         {
-            CultureInfo ci = CultureInfo.CurrentUICulture;
             //zet taal
-            if (String.IsNullOrEmpty(settings.Language))
+            if (!string.IsNullOrEmpty(settings.Language))
             {
-                settings.Language = ci.Name;
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(settings.Language);
             }
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(settings.Language);
             while (!quit)
                 ShowMenu();
         }
