@@ -178,6 +178,15 @@ namespace SC.UI.Web.MVC.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cookie is niet gevonden!.
+        /// </summary>
+        internal static string CookieNotFound {
+            get {
+                return ResourceManager.GetString("CookieNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Maak aan.
         /// </summary>
         internal static string Create {

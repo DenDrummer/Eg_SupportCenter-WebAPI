@@ -156,6 +156,9 @@
   <data name="ContactTitle" xml:space="preserve">
     <value>Contact</value>
   </data>
+  <data name="CookieNotFound" xml:space="preserve">
+    <value>Cookie not found!</value>
+  </data>
   <data name="Create" xml:space="preserve">
     <value>Create</value>
   </data>

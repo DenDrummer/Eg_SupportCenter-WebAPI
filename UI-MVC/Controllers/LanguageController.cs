@@ -13,13 +13,15 @@ namespace SC.UI.Web.MVC.Controllers
     {
         public ActionResult ChangeLang(string newLang)
         {
+            //Veranderd de taal
             Thread.CurrentThread.CurrentCulture = new CultureInfo(newLang);
             Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
+            //Opslaan in cookie
             HttpCookie cookie = new HttpCookie("lang");
             cookie.Value = newLang;
-            cookie.Expires = DateTime.Now.AddDays(7);
+            cookie.Expires = DateTime.Now.AddDays(1);
             HttpContext.Response.SetCookie(cookie);
-
+            //Nieuwe URL creëren
             string uri = Request.UrlReferrer.PathAndQuery;
             string[] uriParams = uri.Split('/');
             StringBuilder newUri = new StringBuilder();

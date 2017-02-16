@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Web;
 using System.Web.Mvc;
-
+using SC.UI.Web.MVC.App_GlobalResources;
 
 namespace SC.UI.Web.MVC.Controllers
 {
@@ -17,8 +17,7 @@ namespace SC.UI.Web.MVC.Controllers
         {
 
             //1) is er een cookie?
-            HttpCookie aCookie = Request.Cookies["lang"];
-            string lang = Server.HtmlEncode(aCookie.Value);
+            string lang = Server.HtmlEncode(Request.Cookies["lang"].Value);
 
             if (lang != null)
             {
@@ -29,9 +28,10 @@ namespace SC.UI.Web.MVC.Controllers
             }else
             {
                 //neen 
-                HttpCookie cookie = new HttpCookie("language");
+                /*HttpCookie cookie = new HttpCookie("language");
                 cookie.Value = lang;
-                Response.Cookies.Add(cookie);
+                Response.Cookies.Add(cookie);*/
+                throw new Exception(Resources.CookieNotFound);
             }
            
             return Redirect("Index");
